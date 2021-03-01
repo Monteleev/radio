@@ -23,7 +23,8 @@ nav {
     min-height: 8vh;
     background-color: #111111;
     font-family: "Poppins", sans-serif;
-    z-index: 9999;
+    z-index: 10;
+    box-shadow: 0px 3px 5px #191919;
 }
 
 .nav-links {
@@ -65,40 +66,120 @@ nav {
     background-size: cover;
 } 
 
-.backdrop
-{
-    position:absolute;
-    top:150px;
-    right:1%;
-    overflow:hidden;
-    background:#998235; 
-    width: 750px; 
-    height: 125px;
-    border-radius: 10px;
-}
-
 .player
 {
     width: 100%;
     position:relative;
-    top:33px;
-    left:10%;
+    top:20%;
+    left:25%;    
     overflow:hidden;
 }
 
 .radio
 {
-    width:40%;
-    height: 125px;
+    background-image:linear-gradient(to bottom right,#8a3a98, #998235);
+    border-radius: 10px;
+    width:51%;
+    height: 150px;
 }
 
-@media screen and (max-width: 1024px) {
+.row
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    margin-top: 25%;
+}
+
+.room
+{
+    flex-basis:100%;
+    position: relative;
+    top:45%; 
+    left:25%;
+    overflow:hidden;
+    width: 10%;
+}
+
+.chat
+{
+    border:solid;
+    width:58%;
+    height:600px;
+}
+
+.social-links img
+{
+  height: 70px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.social-links
+{
+  text-align: center;
+  margin-right: -50px;
+  top: 100px;
+  z-index: 5;
+}
+
+.house1
+{
+    position: relative;
+    border-radius: 3px;
+    width:50px;
+    height: 50px;
+    top:31%;
+    left:29%; 
+    background-image:linear-gradient(to bottom right,#8a3a98, #998235);
+}
+.house2
+{
+    position: relative;
+    border-radius: 3px;
+    width:50px;
+    height: 100px;
+    top:20%;
+    left:31%; 
+    background-image:linear-gradient(to bottom right,#8a3a98, #998235);
+}
+
+.house3
+{
+    border-radius: 3px;
+    width:50px;
+    height: 50px;
+    top:10%;
+    left:35%; 
+    background-image:linear-gradient(to bottom right,#8a3a98, #998235);
+}
+
+
+@media screen and (max-width: 1024px)
+{
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+    }
+    
+    .nav-links li {
+        list-style: none;
+    }
+    
+    .nav-links a {
+        color: #8a3a98;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
     .nav-links {
         width: 60%;
     }
-}
 
-@media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
     }
@@ -106,9 +187,100 @@ nav {
     .nav-links {
         position: fixed;
         right: 0px;
-        height: 50vh;
+        height:60vh;
         top: 8vh;
         background-color: #111111;
+        box-shadow: 0px 3px 5px #191919;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .player
+    {
+        width: 100%;
+        position:relative;
+        top:20%;
+        left:5%;    
+        overflow:hidden;
+    }
+
+    .radio
+    {
+        background-image:linear-gradient(to bottom right,#8a3a98, #998235);
+        border-radius: 10px;
+        width:86%;
+        height: 150px;
+    }
+
+    .row
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: left;
+        margin-top: 38%;
+    }
+    
+    .room
+    {
+        position:relative;
+        top:20%; 
+        left:5%;
+        overflow:hidden;
+    }
+
+    .chat
+    {
+        border:solid;
+        width:110%;
+        height:500px;
+    }
+
+    .social-links img
+    {
+      height: 40px;
+      margin: 20px;
+      cursor: pointer;
+    }
+  
+    .social-links
+    {
+      text-align: center;
+      margin-right: -40px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .logo
+    {
+        position: relative;
+        width: 150px;
+        margin: 1px;
+        right: 10px;
+    }
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height:50vh;
+        top: 8vh;
+        background-color: #111111;
+        box-shadow: 0px 3px 5px #191919;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -126,33 +298,57 @@ nav {
         cursor: pointer;
     }
 
-    .backdrop
-    {
-        position:absolute;
-        top:150px;
-        right:1%;
-        overflow:hidden;
-        background:#998235; 
-        width: 390px; 
-        height: 125px;
-        border-radius: 10px;
-        margin: 6px;
-    }
-
     .player
     {
-        background-color: #8a3a98;
-        border-radius: 70px;
+        width: 100%;
         position:relative;
-        top:160px;
-        left:10%;
+        top:20%;
+        left:5%;    
         overflow:hidden;
     }
 
     .radio
     {
-        width:10pc;
-        height: 1vh;
+        background-image:linear-gradient(to bottom right,#8a3a98, #998235);
+        border-radius: 10px;
+        width:90%;
+        height: 125px;
+    }
+
+    .row
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: left;
+        margin-top: 45%;
+    }
+    
+    .room
+    {
+        position:relative;
+        top:30%; 
+        left:5%;
+        overflow:hidden;
+    }
+
+    .chat
+    {
+        border:solid;
+        width:100%;
+        height:400px;
+    }
+
+    .social-links img
+    {
+      height: 40px;
+      margin: 20px;
+      cursor: pointer;
+    }
+  
+    .social-links
+    {
+      text-align: center;
+      margin-right: -40px;
     }
 }
 

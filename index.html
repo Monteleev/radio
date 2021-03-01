@@ -3,7 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Psoppins%26display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="logom.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Asto Radio</title>
 </head>
 <body>
@@ -12,10 +14,10 @@
             <img id="img2" src="logom.png" class="logo">
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Request</a></li>
-            <li><a href="#">Schedule</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="request.html">Request</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -24,9 +26,22 @@
         </div>
     </nav>
     <div class="bg">
-        <!--<div class="player">
+        <div class="player">
             <iframe src="https://s41.radiolize.com/public/asto_radio/embed" frameborder="0" allowtransparency="true" class="radio"></iframe>
-        </div>-->
+        </div>
+        <div class="row">
+            <div class="room">
+                <iframe src="https://minnit.chat/AstoRadio?embed&&nickname="  allowTransparency="true" class="chat"></iframe>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/astoradio">
+                    <img id="img3" src = "fb.png">
+                </a> 
+                <a href="https://www.instagram.com/astoradio/">
+                    <img id="img4"src = "insta.png">
+                </a>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
