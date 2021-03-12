@@ -5,26 +5,44 @@
     overflow-x: hidden;
 }
 
+@font-face{
+    font-family: "bdplakatt";
+    src: url("bdplakatt.ttf") format("truetype");
+  }
+
 .logo
 {
     position: relative;
     width: 200px;
     margin: 1px;
-    right: 10px;
+    right: 0px;
 }
 
-nav {
+.name
+{
+    font-family: "bdplakatt", sans-serif;
+    color: #8a3a98;
+    text-decoration: none;
+    letter-spacing: 8px;
+    font-size: 40px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav 
+{
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
-    background-color: #111111;
+    height: 14vh;
+    background-color: #ae8d50;
     font-family: "Poppins", sans-serif;
     z-index: 10;
     box-shadow: 0px 3px 5px #191919;
+    overflow-y: hidden;
 }
 
 .nav-links {
@@ -155,8 +173,16 @@ nav {
 }
 
 /*laptop*/
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1280px)
 {
+    .logo
+    {
+        position: relative;
+        width: 180px;
+        margin: 1px;
+        right: 0px;
+    }
+
     .nav-links {
         display: flex;
         justify-content: space-around;
@@ -175,8 +201,106 @@ nav {
         font-size: 16px;
     }
 }
+
+/*laptop2*/
+@media screen and (max-width: 1024px)
+{
+    .logo
+    {
+        position: relative;
+        width: 230px;
+        margin: 1px;
+        right: 0px;
+    }
+
+    nav 
+    {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 14vh;
+        background-color: #ae8d50;
+        font-family: "Poppins", sans-serif;
+        z-index: 10;
+        box-shadow: 0px 3px 5px #191919;
+        overflow-y: hidden;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+    
+    .nav-links li {
+        list-style: none;
+    }
+    
+    .nav-links a {
+        color: #8a3a98;
+        text-decoration: none;
+        letter-spacing: 4px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .player
+    {
+        width: 100%;
+        position:relative;
+        top:20%;
+        left:15%;    
+        overflow:hidden;
+    }
+
+    .radio
+    {
+        background-image:linear-gradient(to bottom right,#8a3a98, #998235);
+        border-radius: 10px;
+        width:70%;
+        height: 150px;
+    }
+
+    .row
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: left;
+        margin-top: 40%;
+    }
+
+    .room
+    {
+        flex-basis:100%;
+        position: relative;
+        top:45%; 
+        left:15%;
+        overflow:hidden;
+        width: 10%;
+    }
+
+    .chat
+    {
+        border:solid;
+        width:83%;
+        height:600px;
+    }
+}
+
 /*tablet*/
 @media screen and (max-width: 768px) {
+     
+    .logo
+    {
+        position: relative;
+        width: 200px;
+        margin: 1px;
+        right: 0px;
+    }
+
     .nav-links {
         width: 60%;
     }
@@ -189,13 +313,13 @@ nav {
         position: fixed;
         right: 0px;
         height:60vh;
-        top: 8vh;
-        background-color: #111111;
+        top: 14vh;
+        background-color: #ae8d50;
         box-shadow: 0px 3px 5px #191919;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 70%;
+        width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
@@ -245,7 +369,7 @@ nav {
     .chat
     {
         border:solid;
-        width:110%;
+        width:100%;
         height:500px;
     }
 
@@ -264,23 +388,24 @@ nav {
 }
 /*phone*/
 @media screen and (max-width: 420px) {
-    body {
+    body 
+    {
         overflow-x: hidden;
     }
-    
+   
     .logo
     {
         position: relative;
-        width: 150px;
+        width: 140px;
         margin: 1px;
-        right: 10px;
+        right: 0px;
     }
     .nav-links {
         position: fixed;
         right: 0px;
         height:50vh;
-        top: 8vh;
-        background-color: #111111;
+        top: 14vh;
+        background-color: #ae8d50;
         box-shadow: 0px 3px 5px #191919;
         display: flex;
         flex-direction: column;
@@ -312,8 +437,8 @@ nav {
     {
         background-image:linear-gradient(to bottom right,#8a3a98, #998235);
         border-radius: 10px;
-        width:90%;
-        height: 125px;
+        width:78%;
+        height: 129px;
     }
 
     .row
